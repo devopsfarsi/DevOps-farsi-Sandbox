@@ -1,249 +1,262 @@
 # DevOps Farsi Sandbox
 
+## معرفی پروژه
+
+DevOps Farsi Sandbox یک پلتفرم آزمایشگاهی برای یادگیری عملی DevOps است.
+
+هدف پروژه این است که مهندس‌های DevOps بتوانند بدون نیاز به ساخت زیرساخت شخصی، وارد یک محیط واقعی و ایزوله شوند، سناریوهای مختلف را اجرا کنند، مشکلات را Debug کنند و مهارت‌های خود را در شرایط نزدیک به Production تقویت کنند.
+
+در این پروژه، کاربر فقط وارد سایت می‌شود، یک سناریو انتخاب می‌کند و یک Sandbox اختصاصی دریافت می‌کند.
+
+داخل این Sandbox کاربر به ابزارهایی مثل:
+
+- Web IDE
+- Terminal
+- Monitoring
+- Logs
+- Metrics
+
+دسترسی دارد و باید یک مسئله واقعی DevOps را حل کند.
 
 
-**DevOps Farsi Sandbox** قراره یه پروژه کاملاً Open Source باشه که خود بچه‌های کامیونیتی **DevOps فارسی** با هم بسازنش، توسعه‌ش بدن و کم‌کم بزرگ‌ترش کنن.
+---
 
+# چرا DevOps Farsi Sandbox؟
 
+یادگیری DevOps معمولاً دو مشکل اصلی دارد:
 
-اما چیزی که می‌خوایم بسازیم فقط یه زیرساخت یا پلتفرم فنی نیست.
+## 1. نبود محیط تمرینی واقعی
 
+بسیاری از آموزش‌ها فقط توضیح می‌دهند:
 
+- Kubernetes چیست؟
+- Docker چیست؟
+- Prometheus چیست؟
 
-هدف اصلی ما ساختن یه **فرهنگ یادگیری و اشتراک تجربه** است؛ فرهنگی بر پایه‌ی:
+اما کاربر تجربه حل مشکل واقعی ندارد.
 
+## 2. ساخت محیط تمرینی سخت است
 
+برای تمرین واقعی معمولاً نیاز است:
 
-**Continuous Learning**
+- Kubernetes Cluster
+- Monitoring Stack
+- Application
+- Database
+- Network Configuration
 
-**Continuous Sharing**
+راه‌اندازی شود.
 
+این کار برای افراد تازه‌کار سخت است.
 
+DevOps Farsi Sandbox این مشکل را حل می‌کند.
 
-یعنی یادگیری برای ما با تموم شدن یه دوره یا دیدن چندتا ویدیو تموم نمی‌شه. می‌خوایم با **ساختن، تجربه کردن، حل مسئله و به اشتراک گذاشتن تجربه‌ها**، همیشه در حال یاد گرفتن از همدیگه باشیم.
+---
+
+# چگونه کار می‌کند؟
+
+Flow کلی در تصویر :
+
 
 
 
 ---
 
+# قابلیت‌های اصلی
+
+## Sandbox Isolation
+
+برای هر کاربر یک محیط جدا ایجاد می‌شود.
+
+هر Sandbox شامل:
+
+- Namespace اختصاصی
+- Resources محدود
+- Network Policy
+- RBAC
+- Workspace
+- Monitoring
+
+است.
 
 
-## Sandbox قراره چی باشه؟
+---
+
+## Template Based Labs
+
+تمام تمرین‌ها به صورت Template تعریف می‌شوند.
+
+هر Template مشخص می‌کند:
+
+- Architecture
+- Difficulty
+- Duration
+- Required Resources
+- Tasks
+- Validation Rules
+- Expected Result
 
 
+مثال:
+Template:
 
-DevOps Farsi Sandbox قراره یه **محیط واقعی و مشترک برای یادگیری و تجربه DevOps** باشه.
+Nginx Reverse Proxy
+
+Difficulty:
+Easy
+
+Duration:
+30 minutes
+
+Skills:
+
+Nginx
+Reverse Proxy
+Networking
+Debugging
+
+---
+
+# User Workspace
+
+هر کاربر بعد از ساخت Sandbox یک Workspace دریافت می‌کند.
 
 
+## IDE
 
-کارها در قالب Task و Challengeهای کوچیک تعریف می‌شن؛ اما هدف فقط انجام دادن Task و تیک زدن اون نیست.
+محیطی برای:
 
-
-
-هر Task باید هدف مشخصی داشته باشه و در نهایت به یک **نتیجه قابل استفاده یا تجربه ارزشمند** برای پروژه و اعضای کامیونیتی منجر بشه.
-
-
-
-در این مسیر می‌خوایم:
+- مشاهده فایل‌ها
+- تغییر Configuration
+- نوشتن Code
 
 
+## Terminal
 
-* از همدیگه یاد بگیریم.
+برای:
 
-* تجربه‌هامون رو به اشتراک بذاریم.
+- بررسی سرویس‌ها
+- Debug
+- اجرای دستورات محدود
 
-* با مشکلات واقعی روبه‌رو بشیم.
 
-* راه‌حل‌های مختلف رو امتحان کنیم.
+## Monitoring
 
-* Code و Infrastructure همدیگه رو Review کنیم.
+برای مشاهده:
 
-* و در کنار همه این‌ها، یاد بگیریم چطور یک محیط واقعی رو طراحی، پیاده‌سازی و نگهداری کنیم.
+- Metrics
+- Logs
+- Service Status
+
+
+---
+
+# Architecture
+
+معماری کلی: تصویر
+
+# Roadmap
+
+## Phase 1 - MVP
+
+هدف:
+
+ساخت اولین Sandbox قابل استفاده
+
+
+Features:
+
+- Simple login
+- Template selection
+- K3s integration
+- Namespace creation
+- Basic Workspace
+- Terminal
+- Monitoring
+- Basic validation
+
+
+---
+
+## Phase 2 - Learning Engine
+
+Features:
+
+- Tasks
+- Automated evaluation
+- Score
+- User progress
+- Leaderboard
+
+
+---
+
+## Phase 3 - Incident Training
+
+Features:
+
+- Fault injection
+- Production-like incidents
+- Debugging scenarios
+- Incident scoring
+
+
+---
+
+## Phase 4 - AI Assistant
+
+Features:
+
+- AI generated incidents
+- Hints
+- Learning suggestions
+- User analysis
+
+
+---
+
+# Contribution
+
+زمینه‌های مشارکت:
+
+## Backend
+
+- API Development
+- Sandbox Lifecycle
+- User Management
+- Validation Engine
+
+
+## Frontend
+
+- Dashboard
+- Template UI
+- Workspace UI
+
+
+## DevOps / Kubernetes
+
+- K3s
+- Helm
+- Namespace Isolation
+- Security
+
+
+## Monitoring
+
+- Prometheus
+- Grafana
+- Loki
 
 
 
 ---
 
+# نتیجه نهایی
 
+کاربر بعد از انجام تمرین:
 
-## خود Sandbox رو هم با هم می‌سازیم
-
-
-
-قرار نیست یک Sandbox آماده داشته باشیم و فقط ازش استفاده کنیم.
-
-
-
-**خودمون قراره بسازیمش.**
-
-
-
-در قدم‌های اول، Contributors روی زیرساخت موردنیاز پروژه کار می‌کنن؛ از **Infrastructure و Network** گرفته تا **Deployment، CI/CD، Monitoring، Security** و هر چیزی که برای یک محیط واقعی نیاز داشته باشیم.
-
-
-
-به این شکل، مشارکت در پروژه فقط یادگیری یک ابزار خاص نیست؛ فرصتیه برای تجربه‌ی کار روی یک **پروژه واقعی و تیمی**.
-
-
-
----
-
-
-
-## تجربه‌ای نزدیک به دنیای واقعی
-
-
-
-هدف نهایی اینه که Sandbox تبدیل بشه به یه محیط عملی که **Juniorها و Mid-levelها** بتونن توش تجربه کسب کنن و خودشون رو محک بزنن.
-
-
-
-مثلاً فرض کن یه پروژه کوچیک داری و می‌خوای اون رو وارد Sandbox کنی:
-
-
-
-```text
-
-Build
-
-  ↓
-
-Test
-
-  ↓
-
-Deploy
-
-  ↓
-
-Monitor
-
-```
-
-
-
-پروژه واقعاً Deploy می‌شه و با چالش‌هایی که در یک محیط واقعی وجود داره روبه‌رو می‌شی.
-
-
-
-حتی می‌تونیم روی همین پروژه Incident ایجاد کنیم:
-
-
-
-```text
-
-Incident
-
-   ↓
-
-Investigate
-
-   ↓
-
-Find the Root Cause
-
-   ↓
-
-Fix
-
-   ↓
-
-Verify
-
-   ↓
-
-Document & Share
-
-```
-
-
-
-در این فرآیند باید مشکل رو پیدا کنی، Root Cause رو بفهمی، برطرفش کنی، نتیجه رو بررسی کنی و در نهایت تجربه‌ای که به دست آوردی رو مستند و با بقیه به اشتراک بذاری.
-
-
-
-اینجوری یک Lab ساده تبدیل می‌شه به تجربه‌ای نزدیک‌تر به **دنیای واقعی**.
-
-
-
----
-
-
-
-## چرا Sandbox؟
-
-
-
-خیلی‌هامون وقتی وارد مسیر DevOps یا حتی Software Engineering می‌شیم، با یک مشکل مشترک روبه‌رو هستیم:
-
-
-
-**تجربه کار روی پروژه‌های واقعی نداریم.**
-
-
-
-ممکنه Docker، Kubernetes، CI/CD یا ابزارهای مختلف دیگه رو بلد باشیم، اما فرصت زیادی برای تجربه‌ی چیزهایی مثل:
-
-
-
-* کار تیمی
-
-* Code Review
-
-* ساخت و مدیریت Infrastructure
-
-* Deployment
-
-* Debugging
-
-* Incident Response
-
-* مستندسازی و اشتراک تجربه
-
-
-
-نداشته باشیم.
-
-
-
-Sandbox قراره این فاصله بین **یادگیری تئوری و تجربه عملی** رو کمتر کنه.
-
-
-
-پس هر Task فقط یک Task نیست؛ می‌تونه تبدیل به یک **تجربه واقعی** بشه.
-
-
-
----
-
-
-
-## برای همه
-
-
-
-DevOps Farsi Sandbox پروژه‌ی یک نفر یا یک تیم خاص نیست.
-
-
-
-**قرارِ خود جامعه فارسی‌زبان DevOps فارسی بسازتش.**
-
-
-
-هر کسی می‌تونه در بخشی از پروژه مشارکت کنه، چیزی یاد بگیره، چیزی یاد بده و تجربه‌ش رو با بقیه به اشتراک بذاره.
-
-
-
-Sandbox هم همراه با کامیونیتی و با مشارکت اعضاش در طول زمان تغییر می‌کنه و بهتر می‌شه.
-
-
-
-در نهایت می‌خوایم یک چرخه‌ی ساده داشته باشیم:
-
-
-
-**Learn → Build → Break → Fix → Share → Grow**
-
-
-
-اگر حس می‌کنی تجربه کار روی پروژه‌های واقعی توی رزومه‌ات کمه، یا دوست داری در ساخت یک پروژه Open Source واقعی کنار بقیه مشارکت کنی، **DevOps Farsi Sandbox می‌تونه جای خوبی برای شروع باشه.**
+- مهارت عملی کسب می‌کند
+- نتیجه دریافت می‌کند
+- Score می‌گیرد
+- Progress او ذخیره می‌شود
