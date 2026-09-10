@@ -56,6 +56,8 @@ DevOps Farsi Sandbox این مشکل را حل می‌کند.
 # چگونه کار می‌کند؟
 
 Flow کلی در تصویر :
+<img width="641" height="555" alt="chart" src="https://github.com/user-attachments/assets/9d251622-3b21-4b91-93ce-07b2e830d37f" />
+
 
 
 
