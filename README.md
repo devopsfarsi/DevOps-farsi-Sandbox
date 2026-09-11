@@ -58,9 +58,7 @@ DevOps Farsi Sandbox این مشکل را حل می‌کند.
 Flow کلی در تصویر :
 
 
-<img width="641" height="555" alt="chart" src="https://github.com/user-attachments/assets/9d251622-3b21-4b91-93ce-07b2e830d37f" />
-
-
+![devopsfarsi-sandbox-diagram](docs/images/DevopsFarsi-Sandbox-Architecture-diagram.png)
 
 
 
@@ -155,11 +153,6 @@ Debugging
 
 ---
 
-# Architecture
-
-معماری کلی: تصویر
-
-<img width="641" height="555" alt="chart" src="https://github.com/user-attachments/assets/a6539853-79b7-457b-a293-eafa19e578db" />
 
 
 # Roadmap
