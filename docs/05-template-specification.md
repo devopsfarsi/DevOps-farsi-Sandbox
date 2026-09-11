@@ -42,7 +42,7 @@ templates/nginx-basic/
 metadata:
   name: nginx-basic
   title: Nginx Reverse Proxy
-  description: یک سرویس وب پشت Reverse Proxy راه بیاندازید و مشکل Routing را حل کنید.
+  description: Set up a web service behind a reverse proxy and resolve the routing issue.
   version: 0.1.0
   author: github-username
   difficulty: easy
@@ -60,16 +60,16 @@ spec:
 
   tasks:
     - id: task-1
-      title: سرویس Nginx را بالا بیاورید
-      description: سرویسی که پشت Proxy قرار می‌گیرد فعال نیست؛ آن را راه‌اندازی کنید.
+      title: Setup Nginx
+      description: The service located behind the proxy is not running; please start it.
       hints:
-        - وضعیت Podها و لاگ‌ها را بررسی کنید.
+        - Check the status of the pods and logs.
 
     - id: task-2
-      title: Routing را درست کنید
-      description: درخواست به مسیر /app باید از Proxy به سرویس پشتی برسد.
+      title: Fix Routing
+      description: Requests to the `/app` path must reach the backend service via the proxy.
       hints:
-        - به upstream تعریف‌شده در configuration دقت کنید.
+        - Pay attention to the upstream defined in the configuration.
 
   validation:
     - task: task-1
