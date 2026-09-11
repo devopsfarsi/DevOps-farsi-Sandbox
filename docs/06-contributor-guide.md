@@ -120,7 +120,7 @@ docs/<topic>       مثال: docs/contributor-guide
 
 ## 10. ارتباط با تیم
 
-https://t.me/DevopsFarsi_ir
-https://www.linkedin.com/company/devops-farsi
+Telegram: https://t.me/DevopsFarsi_ir
+LinkedIn: https://www.linkedin.com/company/devops-farsi
 
 جهت مدیریت بهینه پروژه، پس از همراهی مشارکت‌کنندگان گروهی در تلگرام ایجاد خواهد شد.
